@@ -9,21 +9,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="73" id="KGk-i7-Jjw" customClass="MessageCell" customModule="BeFriend" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="302" height="73"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="61" id="KGk-i7-Jjw" customClass="MessageCell" customModule="BeFriend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="61"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="302" height="73"/>
+                <rect key="frame" x="0.0" y="0.0" width="302" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-QE-k2v">
-                        <rect key="frame" x="10" y="10" width="282" height="53"/>
+                        <rect key="frame" x="10" y="10" width="282" height="41"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-VE-93X" userLabel="Recepient Avatar">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JlK-Qn-F4f"/>
+                                    <constraint firstAttribute="width" constant="40" id="gdI-EO-mmj"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOo-xr-BDq">
-                                <rect key="frame" x="0.0" y="0.0" width="222" height="50"/>
+                                <rect key="frame" x="60" y="0.0" width="162" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzg-rK-CFJ" userLabel="Message Label">
-                                        <rect key="frame" x="10" y="10" width="202" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="142" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,14 +63,16 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="leftAvatarImageView" destination="Ck3-VE-93X" id="DK6-c4-tfy"/>
                 <outlet property="messageBubble" destination="lOo-xr-BDq" id="yXn-wg-dfK"/>
                 <outlet property="messageLabel" destination="mzg-rK-CFJ" id="WDE-LQ-ply"/>
                 <outlet property="rightAvatarImageView" destination="aJI-bZ-NLW" id="pST-Bb-vmp"/>
             </connections>
-            <point key="canvasLocation" x="144.92753623188406" y="168.41517857142856"/>
+            <point key="canvasLocation" x="3" y="71"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="MeAvatar" width="40" height="40"/>
+        <image name="YouAvatar" width="40" height="40"/>
     </resources>
 </document>

@@ -12,6 +12,11 @@ struct Constants {
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
     
+    struct BrandColors {
+        static let senderMessage = "SenderMessageBubble"
+        static let receiverMessage = "ReceiverMessageBubble"
+    }
+    
     struct FStore {
         static let collectionName = "messages"
         static let senderField = "sender"

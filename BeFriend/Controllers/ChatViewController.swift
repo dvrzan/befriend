@@ -52,6 +52,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.chatTableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.chatTableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -71,6 +73,7 @@ class ChatViewController: UIViewController {
                     print("There was an issue saving data to firestore, \(err)")
                 } else {
                     print("Successfully saved data!")
+                    self.messageTextField.text = ""
                 }
             }
         }
@@ -88,6 +91,8 @@ class ChatViewController: UIViewController {
     
 }
 
+//MARK: - UITableViewDataSource
+
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,8 +100,23 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        cell.messageLabel.text = messages[indexPath.row].body
+        cell.messageLabel.text = message.body
+        
+        //Message from the current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftAvatarImageView.isHidden = true
+            cell.rightAvatarImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.senderMessage)
+        }
+        //Message from another user
+        else {
+            cell.leftAvatarImageView.isHidden = false
+            cell.rightAvatarImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.receiverMessage)
+        }
         
         return cell
     }

@@ -116,7 +116,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mXZ-ko-W6T" secondAttribute="height" multiplier="1:1" id="EF5-lF-KPt"/>
                                 </constraints>
-                                <color key="tintColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.076033569869999998" green="0.26622909309999998" blue="0.48193496470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="paperplane.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25"/>
                                 </state>
@@ -130,7 +130,8 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.2137498558" green="0.42081689830000002" blue="0.73534232379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="W5K-KF-Ev3" firstAttribute="top" secondItem="Oa3-pk-HwS" secondAttribute="top" id="8rU-c5-jdO"/>
                             <constraint firstItem="Oa3-pk-HwS" firstAttribute="trailing" secondItem="mXZ-ko-W6T" secondAttribute="trailing" constant="20" id="ALa-TJ-ohk"/>
@@ -146,7 +147,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="08u-29-G2I">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="sCI-KH-iyH" userLabel="Log Out Button">
-                            <color key="tintColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.076033569869999998" green="0.26622909309999998" blue="0.48193496470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="logOutButtonPressed:" destination="dcx-Fz-UAn" id="bED-S3-JY6"/>
                             </connections>
@@ -401,6 +402,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Jkn-tf-m2k">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.076033569869999998" green="0.26622909309999998" blue="0.48193496470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
