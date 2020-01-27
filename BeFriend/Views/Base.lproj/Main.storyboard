@@ -108,21 +108,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-KF-Ev3">
-                                <rect key="frame" x="0.0" y="140" width="414" height="651"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" id="4LC-Rq-3sS">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4LC-Rq-3sS" id="Ez4-9Z-seI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXZ-ko-W6T" userLabel="Send Button">
-                                <rect key="frame" x="363" y="811" width="31" height="31"/>
+                                <rect key="frame" x="363" y="818" width="31" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mXZ-ko-W6T" secondAttribute="height" multiplier="1:1" id="EF5-lF-KPt"/>
                                 </constraints>
@@ -134,33 +124,27 @@
                                     <action selector="sendButtonPressed:" destination="dcx-Fz-UAn" eventType="touchUpInside" id="IEY-XC-AXm"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" text="Message..." translatesAutoresizingMaskIntoConstraints="NO" id="olu-vK-wPY" userLabel="Message Text View">
-                                <rect key="frame" x="20" y="811" width="313" height="31"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your message..." adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Pid-Bq-lWa">
+                                <rect key="frame" x="20" y="818" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLabel.text" value="Message..."/>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.2137498558" green="0.42081689830000002" blue="0.73534232379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="olu-vK-wPY" firstAttribute="leading" secondItem="xVq-Dh-5fK" secondAttribute="leadingMargin" id="4HW-OE-PBO"/>
-                            <constraint firstItem="mXZ-ko-W6T" firstAttribute="leading" secondItem="olu-vK-wPY" secondAttribute="trailing" constant="30" id="7La-Ty-DH9"/>
                             <constraint firstItem="W5K-KF-Ev3" firstAttribute="top" secondItem="Oa3-pk-HwS" secondAttribute="top" id="8rU-c5-jdO"/>
                             <constraint firstItem="Oa3-pk-HwS" firstAttribute="trailing" secondItem="mXZ-ko-W6T" secondAttribute="trailing" constant="20" id="ALa-TJ-ohk"/>
                             <constraint firstItem="W5K-KF-Ev3" firstAttribute="leading" secondItem="Oa3-pk-HwS" secondAttribute="leading" id="HGY-Th-95j"/>
-                            <constraint firstItem="olu-vK-wPY" firstAttribute="bottom" secondItem="mXZ-ko-W6T" secondAttribute="bottom" id="KFU-am-rZO"/>
                             <constraint firstItem="W5K-KF-Ev3" firstAttribute="trailing" secondItem="Oa3-pk-HwS" secondAttribute="trailing" id="NvZ-xP-3bk"/>
+                            <constraint firstItem="Pid-Bq-lWa" firstAttribute="top" secondItem="mXZ-ko-W6T" secondAttribute="top" id="QLa-yE-mSA"/>
+                            <constraint firstItem="Pid-Bq-lWa" firstAttribute="leading" secondItem="xVq-Dh-5fK" secondAttribute="leadingMargin" id="QWr-2J-7ba"/>
                             <constraint firstItem="mXZ-ko-W6T" firstAttribute="top" secondItem="W5K-KF-Ev3" secondAttribute="bottom" constant="20" id="S4f-Qc-a84"/>
-                            <constraint firstItem="Oa3-pk-HwS" firstAttribute="bottom" secondItem="olu-vK-wPY" secondAttribute="bottom" constant="20" id="noB-cL-FNf"/>
-                            <constraint firstItem="olu-vK-wPY" firstAttribute="top" secondItem="mXZ-ko-W6T" secondAttribute="top" id="qdN-ba-asw"/>
+                            <constraint firstItem="Oa3-pk-HwS" firstAttribute="bottom" secondItem="Pid-Bq-lWa" secondAttribute="bottom" constant="10" id="ubg-Vk-O54"/>
+                            <constraint firstItem="mXZ-ko-W6T" firstAttribute="leading" secondItem="Pid-Bq-lWa" secondAttribute="trailing" constant="10" id="yvd-gc-Vu0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Oa3-pk-HwS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="08u-29-G2I">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="08u-29-G2I">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="sCI-KH-iyH" userLabel="Log Out Button">
                             <color key="tintColor" red="0.87843137250000003" green="0.98039215690000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -170,7 +154,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chatTableView" destination="W5K-KF-Ev3" id="XdO-rK-0oI"/>
-                        <outlet property="messageTextView" destination="olu-vK-wPY" id="KrN-8H-mAG"/>
+                        <outlet property="messageTextField" destination="Pid-Bq-lWa" id="zdL-Qe-zR3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNr-Fh-tzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -417,11 +401,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Jkn-tf-m2k">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.2137498558" green="0.42081689830000002" blue="0.73534232379999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.64452189209999999" green="0.047705821689999997" blue="0.34609594939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.64452189209999999" green="0.047705821689999997" blue="0.34609594939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
