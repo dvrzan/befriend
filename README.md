@@ -24,11 +24,12 @@ How to use the app
 * Other...
     
 
- <br />
- <br />
+ </br>
+ </br>
 
->This is a learning project created by implementing different Swift components. Check my portfolio at [dvrzan.github.io](https://dvrzan.github.io).
+>This is a learning project created by implementing different Swift components.</br>
+>Check my portfolio at [dvrzan.github.io](https://dvrzan.github.io).
 
- <br />
+ </br>
 
 ![End Banner](Documentation/EndBanner.png)
