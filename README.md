@@ -6,6 +6,7 @@
   <img src="Documentation/preview.gif">
 </p>
 
+<br />
 
 BeFriend is a simple chat prototype app that uses Firebase for authentication when user logs in after registering with email and password.
 
